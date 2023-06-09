@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+</head>
+<body>
+    <h1>This is the page which displays list of madicine</h1>
+
+    <table>
+    {{#rows}}
+    <tr>
+    <td>{{mid}}</td>
+    <td>{{name}}</td>
+    <td>{{count}}</td>
+    <td>{{brand}}</td>
+    <td>
+         <form action="/meds/delete/{{mid}}" method="post">
+         <button type="submit">Delete</button>
+         </form>
+    </td>
+    <td>
+        <a href = "/meds/edit/{{mid}}">edit</a>
+    </td>
+    </tr>
+    {{/rows}}
+    </table>
+</body>
+</html>
